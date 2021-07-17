@@ -1,0 +1,61 @@
+:root {
+    --sidebarWidth: 250px;
+}
+
+* {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+legend {
+    padding: 0 1rem;
+    margin-left: 1rem;
+}
+
+select {
+    cursor: pointer;
+}
+
+i {
+    padding: 0 !important;
+    font-size: 1.3rem;
+}
+
+tr{
+    display: flex;
+    align-items: center;
+}
+
+#mySidebar {
+    width: var(--sidebarWidth);
+}
+
+#mySidebar .activeBarItem {
+    font-weight: bold;
+}
+
+.mainTitle {
+    font-weight: bold;
+}
+
+
+header #headerTitle, main {
+    margin-left: var(--sidebarWidth);
+}
+
+.backgroundHeader {
+    background-color: rgb(173, 216, 230);
+}
+
+.menuItem {
+    display: flex;
+    align-items: center
+}
+
+.menuIcon {
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+
+
+
