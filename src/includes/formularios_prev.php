@@ -12,7 +12,7 @@
                     <div></div>
                 </div>
                 <div class="w3-row w3-padding" id="formSendButton">
-                    <button class="w3-button w3-white w3-border w3-border-blue">Enviar</button>
+                    <button class="w3-button w3-white w3-border">Enviar</button>
                 </div>
             </div>
         </div>

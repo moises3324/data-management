@@ -8,12 +8,15 @@ const formGenerateButton = document.querySelector("#formGenerateButton")
 const formTitleText = document.querySelector("#formTitleText")
 const formBody = document.querySelector("#formBody")
 
+let containerNumber = 0
+
 formTitleInput.addEventListener("keyup", (e) => {
     formTitleText.innerHTML = e.target.value
 })
 
 formFieldAddButton.addEventListener("click", () => {
-    addFieldFunction()
+    containerNumber = containerNumber + 1
+    addFieldFunction(containerNumber)
     formFieldInput.value = ""
     formFieldSelect.selectedIndex = 0
     formFieldSizeSelect.selectedIndex = 0
@@ -23,6 +26,6 @@ formGenerateButton.addEventListener("click", () => {
     generateForm()
 })
 
-formBody.addEventListener("mouseover", (e)=>{
-    showCloseIcon(e)
+formBody.addEventListener("click", (e) => {
+    removeElement(e)
 })

@@ -1,11 +1,12 @@
+const urlController = '../app/controllers/FormularioController.php'
 const formList = document.querySelector("#formList")
 
 function getAllForms() {
-    $.get('../app/controllers/FormularioController.php', (response) => {
-            const formElements = JSON.parse(response)
-            formListTemplate(formElements)
-        }
-    );
+    fetch('../app/controllers/FormularioController.php').then(response => response.json()).
+    then(data => {
+        const formElements = data
+        formListTemplate(formElements)
+    })
 }
 
 function deleteForm(id, titulo) {
@@ -13,8 +14,8 @@ function deleteForm(id, titulo) {
         const postData = {
             action: "delete",
             id: id
-        };
-        $.post('../app/controllers/FormularioController.php', postData, (response) => {
+        }
+        $.post(urlController, postData, (response) => {
             if (response !== 'Successful') {
                 console.log(response)
             }
